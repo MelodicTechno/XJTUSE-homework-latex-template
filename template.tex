@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \graphicspath{{./images/}}
 \usepackage{courier}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{listings}
 \lstset{
     tabsize = 4, %% set tab space width
@@ -66,7 +68,23 @@
 \tableofcontents
 \newpage{}
 \section{数据设计}
+
 \section{算法设计}
+\listofalgorithms{}
+
+\begin{algorithm}
+\caption{An algorithm with caption}\label{alg:cap}
+\begin{algorithmic}
+    \State{}\(i \gets 10\)
+    \If{\(i \geq 5\)} 
+        \State{}\(i \gets i-1\)
+    \Else{}
+        \If{\(i\leq 3\)}
+            \State{}\(i \gets i+2\)
+        \EndIf{}
+    \EndIf{}
+\end{algorithmic}
+\end{algorithm}
 \section{主干代码展示}
 \section{运行结果}
 \section{总结与收获}
