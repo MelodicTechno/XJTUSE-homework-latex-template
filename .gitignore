@@ -302,6 +302,7 @@ TSWLatexianTemp*
 
 ## output
 out/*.pdf
+out/*.zip
 
 ## problem
 problem/
