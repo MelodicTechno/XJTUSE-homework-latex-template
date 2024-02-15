@@ -2,6 +2,7 @@
 % compile with xelatex
 \PassOptionsToPackage{quiet}{fontspec}
 \documentclass[UTF8]{ctexart}
+\usepackage{float}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{hyperref}
 \hypersetup{
@@ -14,6 +15,11 @@
 \usepackage{courier}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{verbatim}
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\verbatim@input}{\@verbatim}{\scriptsize \@verbatim}{}{}
+\makeatother
 \usepackage{listings}
 \lstset{
     tabsize = 4, %% set tab space width
@@ -22,8 +28,8 @@
     commentstyle = \color{gray}, %% set comment color
     escapeinside=``, %% remember to embrace Chinese with ``
     keywordstyle = \color{purple}, %% set keyword color
-    stringstyle = \color{green!70!black}, %% set string color
-    identifierstyle=\color{blue!50!white},
+    stringstyle = \color{green!60!black}, %% set string color
+    identifierstyle=\color{black},
     rulecolor = \color{black}, %% set frame color to avoid being affected by text color
     basicstyle = \small \ttfamily, %% set listing font and size
     breaklines = true, %% enable line breaking
@@ -73,8 +79,11 @@
 \section{算法设计}
 \listofalgorithms{}
 
-\begin{algorithm}
+\begin{algorithm}[H]
 \caption{An algorithm with caption}\label{alg:cap}
+\hspace{\algorithmicindent}\textbf{输入:}
+
+\hspace{\algorithmicindent}\textbf{输出:}
 \begin{algorithmic}
     \State{}\(i \gets 10\)
     \If{\(i \geq 5\)} 
@@ -88,6 +97,17 @@
 \end{algorithm}
 \section{主干代码展示}
 \section{运行结果}
+\begin{verbatim}
+    Sort random data:
+    run time
+    22.3813
+    Sort sorted data
+    run time
+    21.8277
+    Sort inverse data:
+    run time
+    21.9122
+\end{verbatim}
 \section{总结与收获}
 \newpage
 \appendix
