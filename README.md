@@ -18,7 +18,7 @@
 
 文档里插入的图片在images文件夹里
 
-## .gitiignore
+## .gitignore
 
 我一般把编译文件的输出路径设在根目录的文件夹out里然后把out加到.gitignore里，不然一堆提示很烦。当然.gitignore里还有其他忽略git的设置
 
