@@ -6,7 +6,7 @@
 
 ## 代码
 
-代码放到code文件夹中，推荐先将后缀名改成.txt，因为我用vscode写latex，不改后缀vscode的java插件会叫我建立项目，很烦。
+代码放到code文件夹中，推荐先将后缀名改成.txt，因为我用vscode写latex，不改后缀vscode的话java插件会叫我建立项目，很烦。
 
 在code中有用来批量改后缀的python代码，挺好用的。注意要将terminal定位到code文件夹的位置然后在terminal输入python change_file_name.py，运行。
 
